@@ -1,6 +1,6 @@
 # About
 
-This is a basic calcular implementation using HTML and Javascript.
+This is a basic calculator implementation using HTML and Javascript.
 
  ***
 
@@ -8,7 +8,7 @@ This is a basic calcular implementation using HTML and Javascript.
 
 ---
 
-## <a href = "">Post</a>
+## <a href = "[Sign Up | LinkedIn](https://www.linkedin.com/feed/update/urn:li:share:7018250287362531328/)">Post</a>
 
 ---
 
