@@ -1,3 +1,3 @@
 # days-of-code-streak
 
-<a href = "https://github.com/niyazbadar/days-of-code-streak/tree/main/day%201">day 1</a>
+<a href = "https://github.com/niyazbadar/days-of-code-streak/tree/main/day%201">Day 1 (09-01-2023): Basic Calculator</a>
