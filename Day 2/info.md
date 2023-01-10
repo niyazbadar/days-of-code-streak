@@ -4,7 +4,7 @@ This is a basic ToDo list implementation using HTML and Javascript.
 
  ***
 
-## <a href = "https://github.com/niyazbadar/days-of-code-streak/blob/main/Day%201/basic%20calculator.html">Code</a>
+## <a href = "https://github.com/niyazbadar/days-of-code-streak/blob/main/Day%202/basic%20ToDo%20list.html">Code</a>
 
 ---
 
