@@ -1,0 +1,59 @@
+<!--Day 1: Basic ToDO list-->
+
+<!--this is code for a basic ToDo list using html and javascript-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ToDo list</title>
+  </head>
+  <body>
+    <h1>ToDo list</h1>
+    <input type="text" id="task-input" placeholder="Enter task here"></input>
+    <button id="add-task-button">Add Task</button>
+    <br>
+    <button id="show-tasks-button">Show Tasks</button>
+    <br>
+    <br>
+    <ul id="task-list"></ul>
+
+    <script>
+      <!--create a variable to store the tasks-->
+      let tasks = [];
+
+      <!--get a reference to the task input field and add task button-->
+      let taskInput = document.getElementById("task-input");
+      let addTaskButton = document.getElementById("add-task-button");
+
+      <!--add an event listener to the add task button to handle adding a new task-->
+      addTaskButton.addEventListener("click", function() {
+        <!--get the task text from the input field-->
+        let taskText = taskInput.value;
+
+        <!--add the task to the tasks array-->
+        tasks.push(taskText);
+
+        <!--clear the input field-->
+        taskInput.value = "";
+      });
+
+      <!--get a reference to the show tasks button and task list element-->
+      let showTasksButton = document.getElementById("show-tasks-button");
+      let taskList = document.getElementById("task-list");
+
+      <!--add an event listener to the show tasks button to handle displaying the tasks-->
+      showTasksButton.addEventListener("click", function() {
+        <!--clear the current task list-->
+        taskList.innerHTML = "";
+
+        <!--loop through the tasks array and add each task to the task list-->
+        for (let i = 0; i < tasks.length; i++) {
+          let task = tasks[i];
+          let taskListItem = document.createElement("li");
+          taskListItem.innerHTML = task;
+          taskList.appendChild(taskListItem);
+        }
+      });
+    </script>
+  </body>
+</html>
