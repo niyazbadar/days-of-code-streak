@@ -8,7 +8,7 @@ This is a basic ToDo list implementation using HTML and Javascript.
 
 ---
 
-## <a href = "https://www.linkedin.com/posts/activity-7018250288264323072-Gjie?utm_source=share&utm_medium=member_desktop">Post</a>
+## <a href = "https://www.linkedin.com/posts/activity-7018591135358988289-Q4n8?utm_source=share&utm_medium=member_desktop">Post</a>
 
 ---
 
