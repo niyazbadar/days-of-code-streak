@@ -1,0 +1,30 @@
+<!--Day 3: feet to meter conterter-->
+
+<!--This is a basic feet to meter converter implementation using HTML and Javascript-->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<form>
+  <label for="feet">Feet:</label>
+  <input type="text" id="feet" oninput="convert()">
+  <br>
+  <label for="meters">Meters:</label>
+  <input type="text" id="meters" oninput="convert()">
+</form>
+
+<script>
+function convert() {
+  var feet = document.getElementById("feet").value;
+  var meters = document.getElementById("meters").value;
+  if (feet) {
+    document.getElementById("meters").value = feet / 3.2808;
+  } else if (meters) {
+    document.getElementById("feet").value = meters * 3.2808;
+  }
+}
+</script>
+
+</body>
+</html>
