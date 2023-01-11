@@ -4,11 +4,11 @@ This is a basic feet to meter converter implementation using HTML and Javascript
 
  ***
 
-## <a href = "https://github.com/niyazbadar/days-of-code-streak/blob/main/Day%202/basic%20ToDo%20list.html">Code</a>
+## <a href = "https://github.com/niyazbadar/days-of-code-streak/blob/main/Day%203/feet%20to%20meter%20converter.html">Code</a>
 
 ---
 
-## <a href = "https://www.linkedin.com/posts/activity-7018591135358988289-Q4n8?utm_source=share&utm_medium=member_desktop">Post</a>
+## <a href = "https://www.linkedin.com/posts/activity-7018971022422945792-iuaO?utm_source=share&utm_medium=member_desktop">Post</a>
 
 ---
 
