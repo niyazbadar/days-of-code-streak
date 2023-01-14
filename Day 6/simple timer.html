@@ -1,0 +1,42 @@
+<!--Day 6: simple timer-->
+
+<!--This is simple timer implementation using HTML and Javascript-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Timer</title>
+  </head>
+  <body>
+    <div id="timer">
+      <label for="minutes">Minutes:</label>
+      <input type="number" id="minutes" value="0" min="0" max="59">
+      <label for="seconds">Seconds:</label>
+      <input type="number" id="seconds" value="0" min="0" max="59">
+      <button onclick="startTimer()">Start</button>
+      <button onclick="stopTimer()">Stop</button>
+    </div>
+    <script>
+      let timer;
+
+      function startTimer() {
+        let minutes = document.getElementById("minutes").value;
+        let seconds = document.getElementById("seconds").value;
+        let time = (minutes * 60) + seconds;
+        timer = setInterval(function() {
+          time--;
+          let minutes = Math.floor(time / 60);
+          let seconds = time % 60;
+          document.getElementById("timer").innerHTML = minutes + " minutes " + seconds + " seconds remaining";
+          if (time === 0) {
+            stopTimer();
+          }
+        }, 1000);
+      }
+
+      function stopTimer() {
+        clearInterval(timer);
+      }
+    </script>
+  </body>
+</html>
