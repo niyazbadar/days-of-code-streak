@@ -4,7 +4,7 @@ This is simple timer implementation using HTML and Javascript.
 
  ***
 
-## <a href = "https://github.com/niyazbadar/days-of-code-streak/blob/main/Day%206/info.md">Code</a>
+## <a href = "https://github.com/niyazbadar/days-of-code-streak/blob/main/Day%206/simple%20timer.html">Code</a>
 
 ---
 
