@@ -8,7 +8,7 @@ This is simple timer implementation using HTML and Javascript.
 
 ---
 
-## <a href = "https://www.linkedin.com/posts/activity-7019687202083201024-30Ja?utm_source=share&utm_medium=member_desktop">Post</a>
+## <a href = "https://www.linkedin.com/posts/activity-7020058824812244992-rYgl?utm_source=share&utm_medium=member_desktop">Post</a>
 
 ---
 
