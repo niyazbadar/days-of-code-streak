@@ -13,3 +13,5 @@
 <a href = "https://github.com/niyazbadar/days-of-code-streak/tree/main/Day%206">Day 6 (14-01-2023): simple timer</a>
 
 <a href = "https://github.com/niyazbadar/days-of-code-streak/tree/main/Day%207">Day 7 (15-01-2023): form validation</a>
+
+<a href = "https://github.com/niyazbadar/days-of-code-streak/tree/main/Day%208">Day 8 (16-01-2023): quiz</a>
