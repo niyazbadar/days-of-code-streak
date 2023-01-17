@@ -1,0 +1,67 @@
+<!--Day 9: simple calender-->
+
+<!--This is a simple calender implementation using HTML and Javascript-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calendar</title>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Sun</th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+      </tr>
+    </thead>
+    <tbody id="calendar"></tbody>
+  </table>
+
+  <script>
+    // Get the current date
+    var date = new Date();
+    var month = date.getMonth();
+    var year = date.getFullYear();
+    
+    // Get the first day of the month
+    var firstDay = new Date(year, month, 1);
+    var startingDay = firstDay.getDay();
+    
+    // Get the number of days in the month
+    var monthLength = new Date(year, month+1, 0).getDate();
+    
+    // Create the calendar
+    var calendar = document.getElementById("calendar");
+    var date = 1;
+    for (var i = 0; i < 6; i++) {
+      var row = document.createElement("tr");
+      for (var j = 0; j < 7; j++) {
+        if (i === 0 && j < startingDay) {
+          var cell = document.createElement("td");
+          var cellText = document.createTextNode("");
+          cell.appendChild(cellText);
+          row.appendChild(cell);
+        } else if (date > monthLength) {
+          break;
+        } else {
+          var cell = document.createElement("td");
+          var cellText = document.createTextNode(date);
+          if (date === new Date().getDate() && month === new Date().getMonth()) {
+            cell.classList.add("today");
+          }
+          cell.appendChild(cellText);
+          row.appendChild(cell);
+          date++;
+        }
+      }
+      calendar.appendChild(row);
+    }
+  </script>
+</body>
+</html>
