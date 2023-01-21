@@ -1,0 +1,28 @@
+<!--Day 11: date and time-->
+
+<!--This is a simple programme to show current date and time using HTML and Javascript-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Current Date and Time</title>
+    <style>
+        h1, #time {
+            text-align: center;
+            font-size: 3em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Current Date and Time</h1>
+    <p id="time"></p>
+    <script>
+        function displayTime() {
+            var date = new Date();
+            var time = date.toLocaleString();
+            document.getElementById("time").innerHTML = time;
+        }
+        setInterval(displayTime, 1000);
+    </script>
+</body>
+</html>

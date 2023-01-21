@@ -1,0 +1,48 @@
+<!--Day 12: projectile motion calculator-->
+
+<!--This is a simple programme to calculate projectile motion of an object using HTML and Javascript-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Projectile Motion Calculator</title>
+  </head>
+  <body>
+    <h1>Projectile Motion Calculator</h1>
+
+    <form>
+      <label for="mass">Mass (kg):</label>
+      <input type="number" id="mass" name="mass">
+      <br>
+      <label for="angle">Angle (degrees):</label>
+      <input type="number" id="angle" name="angle">
+      <br>
+      <label for="velocity">Velocity (m/s):</label>
+      <input type="number" id="velocity" name="velocity">
+      <br>
+      <input type="button" value="Calculate" onclick="calculate()">
+    </form>
+
+    <div id="output"></div>
+
+    <script>
+      function calculate() {
+        // Get user input
+        var mass = document.getElementById("mass").value;
+        var angle = document.getElementById("angle").value;
+        var velocity = document.getElementById("velocity").value;
+
+        // Perform calculations
+        var time = (2 * velocity * Math.sin(angle)) / 9.8;
+        var horizontalDistance = velocity * time * Math.cos(angle);
+        var verticalDistance = velocity * time * Math.sin(angle) - (0.5 * 9.8 * time * time);
+
+        // Display output
+        var output = document.getElementById("output");
+        output.innerHTML = "Time: " + time + " seconds<br>";
+        output.innerHTML += "Horizontal Distance: " + horizontalDistance + " meters<br>";
+        output.innerHTML += "Vertical Distance: " + verticalDistance + " meters";
+      }
+    </script>
+  </body>
+</html>
