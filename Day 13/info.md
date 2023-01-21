@@ -1,6 +1,6 @@
 # About
 
-This is a simple programme to show current date and time using HTML and Javascript.
+This is a simple programme for a math quiz using HTML and Javascript.
 
 ---
 
@@ -14,4 +14,4 @@ This is a simple programme to show current date and time using HTML and Javascri
 
 ## Implementation
 
-It can be used in websites to show the user the current date and time.
+It can be used in educational websites to help teach maths to children.

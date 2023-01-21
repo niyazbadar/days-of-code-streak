@@ -1,0 +1,54 @@
+<!--Day 13: math quiz-->
+
+<!--This is a simple programme for a math quiz using HTML and Javascript-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Math Quiz</title>
+  </head>
+  <body>
+    <h1>Math Quiz</h1>
+    <div id="problem"></div>
+    <form>
+      <label for="answer">Answer:</label>
+      <input type="number" id="answer" name="answer">
+      <input type="button" value="Check Answer" onclick="checkAnswer()">
+    </form>
+    <div id="result"></div>
+    <div id="score">Score: 0</div>
+    <script>
+      var score = 0;
+      function generateProblem() {
+        // Get two random numbers
+        var num1 = Math.floor(Math.random() * 10);
+        var num2 = Math.floor(Math.random() * 10);
+        // Get a random operator
+        var operators = ['+', '-', '*', '/'];
+        var operator = operators[Math.floor(Math.random() * operators.length)];
+        // Display the problem
+        var problem = document.getElementById("problem");
+        problem.innerHTML = num1 + " " + operator + " " + num2 + " = ";
+        return [num1, operator, num2];
+      }
+      var problem = generateProblem();
+      function checkAnswer() {
+        // Get the answer from the user
+        var answer = document.getElementById("answer").value;
+        // Check if the answer is correct
+        var result = document.getElementById("result");
+        if (eval(problem[0] + problem[1] + problem[2]) == answer) {
+          result.innerHTML = "Correct!";
+          score++;
+        } else {
+          result.innerHTML = "Wrong!";
+          score--;
+        }
+        // Update the score
+        var score_div = document.getElementById("score");
+        score_div.innerHTML = "Score: " + score;
+        problem = generateProblem();
+      }
+    </script>
+  </body>
+</html>
