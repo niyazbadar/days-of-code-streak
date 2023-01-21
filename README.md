@@ -21,3 +21,5 @@
 <a href = "https://github.com/niyazbadar/days-of-code-streak/tree/main/Day%2010">Day 10 (18-01-2023): Blend Colours</a>
 
 <a href = "https://github.com/niyazbadar/days-of-code-streak/tree/main/Day%2011">Day 11 (19-01-2023): Current Date and Time</a>
+
+<a href = "https://github.com/niyazbadar/days-of-code-streak/tree/main/Day%2012">Day 12 (20-01-2023): Projectile Motion calculator</a>
