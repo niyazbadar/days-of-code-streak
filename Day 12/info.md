@@ -4,11 +4,11 @@ This is a simple programme to calculate projectile motion of an object using HTM
 
 ---
 
-## <a href = "https://github.com/niyazbadar/days-of-code-streak/blob/main/Day%2011/date%20and%20time.html">Code</a>
+## <a href = "https://github.com/niyazbadar/days-of-code-streak/blob/main/Day%2012/projectile%20motion%20calculator.html">Code</a>
 
 ---
 
-## <a href = "https://www.linkedin.com/posts/activity-7021877019512610816-r86T?utm_source=share&utm_medium=member_desktop">Post</a>
+## <a href = "https://www.linkedin.com/posts/activity-7022600922837004288-enl0?utm_source=share&utm_medium=member_desktop">Post</a>
 
 ---
 
