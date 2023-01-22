@@ -1,0 +1,57 @@
+<!--Day 14: bouncing square-->
+
+<!--This is a simple programme to show a square bouncing around in a grid using HTML and Javascript-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bouncing Square</title>
+    <style>
+      /* Define the grid */
+      #grid {
+        width: 600px;
+        height: 400px;
+        border: 1px solid black;
+        position: relative;
+      }
+      /* Define the square */
+      #square {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bouncing Square</h1>
+    <div id="grid">
+      <div id="square"></div>
+    </div>
+    <script>
+      // Get the square and grid elements
+      var square = document.getElementById("square");
+      var grid = document.getElementById("grid");
+      // Set the initial position and velocity of the square
+      var x = 0;
+      var y = 0;
+      var xVelocity = 1;
+      var yVelocity = 1;
+      // Animate the square
+      setInterval(function() {
+        // Update the position of the square
+        x += xVelocity;
+        y += yVelocity;
+        square.style.left = x + "px";
+        square.style.top = y + "px";
+        // Check for collision with the edges of the grid
+        if (x + 50 > grid.offsetWidth || x < 0) {
+          xVelocity = -xVelocity;
+        }
+        if (y + 50 > grid.offsetHeight || y < 0) {
+          yVelocity = -yVelocity;
+        }
+      }, 10);
+    </script>
+  </body>
+</html>
