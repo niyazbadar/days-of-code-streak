@@ -1,0 +1,91 @@
+<!--Day 15 flappy bird-->
+
+<!--This is a simple flappy bird clone using HTML and Javascript-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flappy Bird</title>
+    <style>
+      /* Define the game container */
+      #game {
+        width: 400px;
+        height: 600px;
+        background-color: #87CEEB;
+        position: relative;
+      }
+      /* Define the bird */
+      #bird {
+        width: 50px;
+        height: 50px;
+        background-color: yellow;
+        position: absolute;
+        bottom: 50px;
+        left: 50px;
+      }
+      /* Define the pipes */
+      .pipe {
+        width: 50px;
+        height: 200px;
+        background-color: green;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      /* Define the ground */
+      #ground {
+        width: 100%;
+        height: 50px;
+        background-color: #8B4513;
+        position: absolute;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flappy Bird</h1>
+    <div id="game">
+      <div id="bird"></div>
+      <div class="pipe"></div>
+      <div class="pipe"></div>
+      <div id="ground"></div>
+    </div>
+    <script>
+      // Get the bird and game elements
+      var bird = document.getElementById("bird");
+      var game = document.getElementById("game");
+      // Set the initial position and velocity of the bird
+      var y = 50;
+      var yVelocity = 0;
+      // Set the initial position of the pipes
+      var pipes = document.getElementsByClassName("pipe");
+      pipes[0].style.top = "200px";
+      pipes[1].style.top = "400px";
+      // Animate the bird
+      setInterval(function() {
+        // Update the position of the bird
+        y += yVelocity;
+        bird.style.bottom = y + "px";
+        yVelocity += 0.1;
+        // Check for collision with the pipes and ground
+        for (var i = 0; i < pipes.length; i++) {
+          if (
+            (bird.offsetLeft + bird.offsetWidth > pipes[i].offsetLeft &&
+              bird.offsetLeft < pipes[i].offsetLeft + pipes[i].offsetWidth &&
+              bird.offsetTop < pipes[i].offsetHeight) ||
+            bird.offsetTop + bird.offsetHeight > game.offsetHeight - 50
+          ) {
+            alert("Game Over!");
+            location.reload();
+          }
+        }
+      }, 10);
+      // Allow the user to control the bird
+      document.onkeydown = function(e) {
+        if (e.keyCode === 32) {
+          yVelocity = -5;
+        }
+      };
+    </script>
+  </body>
+</html>
