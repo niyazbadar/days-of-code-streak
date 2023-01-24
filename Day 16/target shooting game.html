@@ -1,0 +1,83 @@
+<!--Day 16: target shooting game-->
+
+<!--This is a simple target shooting game using HTML and Javascript-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Target Shooting Game</title>
+    <style>
+      /* Define the game container */
+      #game {
+        width: 600px;
+        height: 400px;
+        background-color: #87CEEB;
+        position: relative;
+      }
+      /* Define the targets */
+      .target {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        position: absolute;
+      }
+      /* Define the score display */
+      #score {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Target Shooting Game</h1>
+    <div id="game">
+      <div class="target"></div>
+      <div class="target"></div>
+      <div id="score">Score: 0</div>
+    </div>
+    <script>
+      // Get the game and score elements
+      var game = document.getElementById("game");
+      var scoreDisplay = document.getElementById("score");
+      // Get the targets
+      var targets = document.getElementsByClassName("target");
+      // Set the initial positions of the targets
+      targets[0].style.left = "100px";
+      targets[0].style.top = "200px";
+      targets[1].style.left = "500px";
+      targets[1].style.top = "100px";
+      // Set the initial score
+      var score = 0;
+      // Animate the targets
+      setInterval(function() {
+        // Update the positions of the targets
+        targets[0].style.left =
+          parseInt(targets[0].style.left) + Math.random() * 10 - 5 + "px";
+        targets[0].style.top =
+          parseInt(targets[0].style.top) + Math.random() * 10 - 5 + "px";
+        targets[1].style.left =
+          parseInt(targets[1].style.left) + Math.random() * 10 - 5 + "px";
+        targets[1].style.top =
+          parseInt(targets[1].style.top) + Math.random() * 10 - 5 + "px";
+      }, 50);
+      // Allow the user to click on the targets
+      game.onclick = function(e) {
+        for (var i = 0; i < targets.length; i++) {
+          if (
+            e.clientX > targets[i].offsetLeft &&
+            e.clientX < targets[i].offsetLeft + targets[i].offsetWidth &&
+            e.clientY > targets[i].offsetTop &&
+            e.clientY < targets[i].offsetTop + targets[i].offsetHeight
+          ) {
+            score++;
+            scoreDisplay.innerHTML = "Score: " + score;
+            targets[i].style.display = "none";
+          }
+        }
+      };  
+    </script>
+  </body>
+</html>
