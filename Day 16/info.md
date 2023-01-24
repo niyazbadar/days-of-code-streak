@@ -4,11 +4,11 @@ This is a simple target shooting game using HTML and Javascript.
 
 ---
 
-## <a href = "https://github.com/niyazbadar/days-of-code-streak/blob/main/Day%2015/flappy%20bird.html">Code</a>
+## <a href = "https://github.com/niyazbadar/days-of-code-streak/blob/main/Day%2016/target%20shooting%20game.html">Code</a>
 
 ---
 
-## <a href = "https://www.linkedin.com/posts/activity-7023332140238987264-NJfG?utm_source=share&utm_medium=member_desktop">Post</a>
+## <a href = "https://www.linkedin.com/posts/activity-7023716492630274048-jf5o?utm_source=share&utm_medium=member_desktop">Post</a>
 
 ---
 
