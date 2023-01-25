@@ -31,3 +31,5 @@
 <a href = "https://github.com/niyazbadar/days-of-code-streak/tree/main/Day%2015">Day 15 (23-01-2023): Flappy Bird</a>
 
 <a href = "https://github.com/niyazbadar/days-of-code-streak/tree/main/Day%2016">Day 16 (24-01-2023): target shooting game</a>
+
+<a href = "https://github.com/niyazbadar/days-of-code-streak/tree/main/Day%2017">Day 17 (25-01-2023): snake game</a>
