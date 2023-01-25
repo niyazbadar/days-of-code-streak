@@ -1,0 +1,113 @@
+<!--Day 17: snake-->
+
+<!--This is a simple snake game using HTML and Javascript-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Snake Game</title>
+    <style>
+      /* Define the game container */
+      #game {
+        width: 400px;
+        height: 400px;
+        background-color: #87CEEB;
+        position: relative;
+        margin: 0 auto;
+      }
+      /* Define the snake */
+      .snake {
+        width: 10px;
+        height: 10px;
+        background-color: green;
+        position: absolute;
+      }
+      /* Define the food */
+      .food {
+        width: 10px;
+        height: 10px;
+        background-color: red;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Snake Game</h1>
+    <div id="game"></div>
+    <script>
+      // Create the snake
+      var snake = [];
+      for (var i = 0; i < 25; i++) {
+        var segment = document.createElement("div");
+        segment.classList.add("snake");
+        segment.style.left = i * 10 + "px";
+        segment.style.top = "0px";
+        snake.push(segment);
+        document.getElementById("game").appendChild(segment);
+      }
+      // Create the food
+      var food = document.createElement("div");
+      food.classList.add("food");
+      document.getElementById("game").appendChild(food);
+      // Set the initial position of the food
+      food.style.left = Math.floor(Math.random() * 39) * 10 + "px";
+      food.style.top = Math.floor(Math.random() * 39) * 10 + "px";
+      // Set the initial direction of the snake
+      var direction = "right";
+      // Update the snake's position
+      setInterval(function() {
+        // Get the current position of the snake's head
+        var head = snake[snake.length - 1];
+        var left = parseInt(head.style.left);
+        var top = parseInt(head.style.top);
+        // Update the position of the snake's head based on the direction
+        if (direction === "right") {
+          left += 10;
+        } else if (direction === "left") {
+          left -= 10;
+        } else if (direction === "up") {
+          top -= 10;
+        } else if (direction === "down") {
+          top += 10;
+        }
+        // Create a new segment for the snake's head
+        var newHead = document.createElement("div");
+        newHead.classList.add("snake");
+        newHead.style.left = left + "px";
+        newHead.style.top = top + "px";
+        // Add the new segment to the snake
+        snake.push(newHead);
+        document.getElementById("game").appendChild(newHead);
+        // Remove the last segment of the snake
+        var tail = snake.shift();
+        document.getElementById("game").removeChild(tail);
+        // Check if the snake hit the food
+        if (newHead.offsetLeft === food.offsetLeft && newHead.offsetTop === food.offsetTop) {
+          // Generate new food
+          food.style.left = Math.floor(Math.random() * 39) * 10 + "px";
+          food.style.top = Math.floor(Math.random() * 39) * 10 + "px";
+        }
+        // Check if the snake hit the edge of the game container
+        if (newHead.offsetLeft < 0 || newHead.offsetLeft > 390 || newHead.offsetTop < 0 || newHead.offsetTop > 390) {
+          alert("Game Over!");
+          clearInterval(intervalId);
+        }
+      }, 100);
+      // Allow the user to control the snake
+      document.onkeydown = function(event) {
+        if (event.keyCode === 37 && direction !== "right"){
+          direction = "left";
+        }
+        else if (event.keyCode === 38 && direction !== "down") {
+          direction = "up";
+        }
+        else if (event.keyCode === 39 && direction !== "left") {
+          direction = "right";
+        }
+        else if (event.keyCode === 40 && direction !== "up") {
+          direction = "down";
+        }
+      };
+    </script>
+  </body>
+</html>
