@@ -1,0 +1,43 @@
+<!--Day 18: notes-->
+
+<!--This is a simple note taking app using HTML and Javascript-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Note Taking App</title>
+  </head>
+  <body>
+    <h1>Note Taking App</h1>
+    <form>
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title"><br><br>
+      <label for="note">Note:</label>
+      <textarea id="note" name="note"></textarea><br><br>
+      <button type="button" onclick="saveNote()">Save Note</button>
+    </form>
+    <br><br>
+    <div id="saved-notes"></div>
+    <script>
+      var notes = [];
+      function saveNote() {
+        var title = document.getElementById("title").value;
+        var note = document.getElementById("note").value;
+        var newNote = { title: title, note: note };
+        notes.push(newNote);
+        localStorage.setItem("notes", JSON.stringify(notes));
+        displayNotes();
+      }
+      function displayNotes() {
+        var savedNotes = document.getElementById("saved-notes");
+        savedNotes.innerHTML = "";
+        var storedNotes = JSON.parse(localStorage.getItem("notes"));
+        for (var i = 0; i < storedNotes.length; i++) {
+          savedNotes.innerHTML += "<h3>" + storedNotes[i].title + "</h3>";
+          savedNotes.innerHTML += "<p>" + storedNotes[i].note + "</p>";
+        }
+      }
+      displayNotes();
+    </script>
+  </body>
+</html>
