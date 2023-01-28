@@ -37,3 +37,5 @@
 <a href = "https://github.com/niyazbadar/days-of-code-streak/tree/main/Day%2018">Day 18 (26-01-2023): Note Taking App</a>
 
 <a href = "https://github.com/niyazbadar/days-of-code-streak/tree/main/Day%2019">Day 19 (27-01-2023): Bouncing Ball Simulation</a>
+
+<a href = "https://github.com/niyazbadar/days-of-code-streak/tree/main/Day%2020">Day 20 (28-01-2023): Idle Clicker</a>
